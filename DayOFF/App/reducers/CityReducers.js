@@ -10,24 +10,24 @@ export default (state = INITIAL_STATE,action) => {
 
         case LIST_LOAD:
 
-        console.log(' load '+action)
+            console.log(' load '+action)
      
-        return {...state,data:[]};
+            return {...state,data:[]};
     
         case LIST_SUCCESS:
 
-        console.log(' reducers  succes'+action)
+            console.log(' reducers  succes'+action)
 
         return {...state,data:action.payload};
 
         case LIST_FAIL:
 
-        console.log(' Reducesr  fail '+action.payload+ ' ')
+            console.log(' Reducesr  fail '+action.payload+ ' ')
 
-        return {...state,myerror:action.payload};
+            return {...state,myerror:action.payload};
 
         default:
 
-        return state;
+            return state;
     }
 }
